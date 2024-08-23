@@ -1,0 +1,4 @@
+Appending data using dup, dup2, and fcntl
+Appending data using dup, dup2, and fcntl
+Appending data using dup, dup2, and fcntl
+Appending data using dup, dup2, and fcntl
