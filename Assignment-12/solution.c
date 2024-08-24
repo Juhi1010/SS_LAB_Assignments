@@ -6,19 +6,19 @@
 
 void openingMode(int flags) {
     if (flags & O_RDONLY) {
-        printf("File is opened in read-only mode.\n");
+        printf("File is opened in read-only mode\n");
     }
     if (flags & O_WRONLY) {
-        printf("File is opened in write-only mode.\n");
+        printf("File is opened in write-only mode\n");
     }
     if (flags & O_RDWR) {
-        printf("File is opened in read-write mode.\n");
+        printf("File is opened in read-write mode\n");
     }
     if (flags & O_APPEND) {
-        printf("File is opened in append mode.\n");
+        printf("File is opened in append mode\n");
     }
     if (flags & O_CREAT) {
-        printf("File is opened with O_CREAT flag (create file if it does not exist).\n");
+        printf("File is opened(created) with O_CREAT flag\n");
     }
 }
 
@@ -26,7 +26,7 @@ int main() {
     
     const char *destFile = "sample.txt";
 
-    int fd = open(destFile, O_RDWR , 0644);
+    int fd = open(destFile, O_RDWR | O_CREAT | O_APPEND, 0644);
     if (fd == -1) {
         perror("open");
         return 1;
